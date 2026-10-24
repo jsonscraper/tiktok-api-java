@@ -21,6 +21,7 @@ Official Java client for the [jsonscraper TikTok Scraper API](https://jsonscrape
 - [License key and access](#2-get-api-access)
 - [First request](#3-make-your-first-request)
 - [Request examples](#more-request-examples)
+- [Complete example catalogue](#complete-request-example-catalogue)
 - [Endpoint reference](docs/endpoints.md)
 - [Configuration](#configuration)
 - [Errors, pagination and caching](#errors-pagination-and-caching)
@@ -108,6 +109,112 @@ Use the generic request method for newly added routes without waiting for an SDK
 - [Read a page of user videos](examples/Feed.java) — `GET /getUserFeed`.
 
 These examples make one request each. They never loop automatically through your quota. For feed pagination, inspect the returned cursor and `has_more`, then pass the cursor back to the same endpoint.
+
+## Complete request example catalogue
+
+Every link opens a full program with parameters, authentication, timeout, errors and output handling. **[Running the examples](examples/README.md)** explains the commands.
+
+<details>
+<summary>Video · 6 examples</summary>
+
+- [Get non watermarked video url](examples/endpoints/GetNoWatermarkUrl.java) — `GET /getNoWatermarkUrl`.
+- [Get non watermarked video url by video ID](examples/endpoints/GetNoWatermarkUrlById.java) — `GET /getNoWatermarkUrlByID`.
+- [Get video info by ID](examples/endpoints/GetVideoById.java) — `GET /getVideoByID`.
+- [Get video info by URL](examples/endpoints/GetVideoByUrl.java) — `GET /getVideoByUrl`.
+- [Convert short TikTok video URL to full TikTok video URL](examples/endpoints/GetUnshortenedUrl.java) — `GET /getUnshortenedUrl`.
+- [Get video by playlist ID](examples/endpoints/GetVideoByPlaylistId.java) — `GET /getVideoByPlaylistID`.
+
+</details>
+
+<details>
+<summary>Comments · 3 examples</summary>
+
+- [Get comments list by video URL](examples/endpoints/GetCommentsByUrl.java) — `GET /getCommentsByUrl`.
+- [Get comments list by video ID](examples/endpoints/GetCommentsById.java) — `GET /getCommentsByID`.
+- [Get comments replies](examples/endpoints/GetCommentsReplies.java) — `GET /getCommentsReplies`.
+
+</details>
+
+<details>
+<summary>Search · 9 examples</summary>
+
+- [Search for user by keyword](examples/endpoints/SearchUser.java) — `GET /searchUser`.
+- [Search for video by keyword](examples/endpoints/SearchVideo.java) — `GET /searchVideo`.
+- [Search for music by keyword](examples/endpoints/SearchMusic.java) — `GET /searchMusic`.
+- [Search for live by keyword](examples/endpoints/SearchLive.java) — `GET /searchLive`.
+- [Search for hashtag by keyword](examples/endpoints/SearchHashtag.java) — `GET /searchHashtag`.
+- [Search for location by keyword](examples/endpoints/SearchLocation.java) — `GET /searchLocation`.
+- [Top search by text query](examples/endpoints/SearchTop.java) — `GET /searchTop`.
+- [Search insights by text query](examples/endpoints/SearchInsights.java) — `GET /searchInsights`.
+- [Search comment suggested users](examples/endpoints/SearchCommentSuggestedUsers.java) — `GET /searchCommentSuggestedUsers`.
+
+</details>
+
+<details>
+<summary>Users And Feeds · 16 examples</summary>
+
+- [Get user info by profile URL or nickname](examples/endpoints/GetUserInfo.java) — `GET /getUserInfo`.
+- [Get user info by profile ID](examples/endpoints/GetUserInfoById.java) — `GET /getUserInfoByID`.
+- [Get user info by username](examples/endpoints/GetBasicUserInfo.java) — `GET /getBasicUserInfo`.
+- [Get user feed by profile URL or nickname](examples/endpoints/GetUserFeed.java) — `GET /getUserFeed`.
+- [Get user feed by profile ID](examples/endpoints/GetUserFeedById.java) — `GET /getUserFeedByID`.
+- [Get user ID by profile URL or nickname](examples/endpoints/GetUserId.java) — `GET /getUserID`.
+- [Get username by TikTok user ID](examples/endpoints/GetUsernameById.java) — `GET /getUsernameByID`.
+- [Get Twitter username by profile URL, nickname or TikTok user ID](examples/endpoints/GetTwitterUsername.java) — `GET /getTwitterUsername`.
+- [Get Instagram username by profile URL, nickname or TikTok user ID](examples/endpoints/GetInstagramUsername.java) — `GET /getInstagramUsername`.
+- [Get user followers by profile URL or nickname](examples/endpoints/GetFollowers.java) — `GET /getFollowers`.
+- [Get user followers by profile ID](examples/endpoints/GetFollowersById.java) — `GET /getFollowersByID`.
+- [Get user following by profile URL or nickname](examples/endpoints/GetFollowing.java) — `GET /getFollowing`.
+- [Get user following by profile ID](examples/endpoints/GetFollowingById.java) — `GET /getFollowingByID`.
+- [Get user stories](examples/endpoints/GetUserStories.java) — `GET /getUserStories`.
+- [Get user playlists](examples/endpoints/GetUserPlaylists.java) — `GET /getUserPlaylists`.
+- [Get user playlist by ID](examples/endpoints/GetUserPlaylistById.java) — `GET /getUserPlaylistByID`.
+
+</details>
+
+<details>
+<summary>Other Endpoints · 11 examples</summary>
+
+- [Get YouTube channel info by profile URL, nickname or TikTok user ID](examples/endpoints/GetYoutubeChannel.java) — `GET /getYoutubeChannel`.
+- [Get location info by ID](examples/endpoints/GetLocationInfoById.java) — `GET /getLocationInfoByID`.
+- [Get videos by location ID](examples/endpoints/GetLocationFeedById.java) — `GET /getLocationFeedByID`.
+- [Get trending categories list](examples/endpoints/GetTrendingCategoriesList.java) — `GET /getTrendingCategoriesList`.
+- [Get trending feed](examples/endpoints/GetTrendingFeed.java) — `GET /getTrendingFeed`.
+- [Get effect information by IDs](examples/endpoints/GetStickersById.java) — `GET /getStickersByID`.
+- [Get effect information by ID](examples/endpoints/GetStickerById.java) — `GET /getStickerByID`.
+- [Get videos by effect ID](examples/endpoints/GetStickerFeedById.java) — `GET /getStickerFeedByID`.
+- [Get story info by ID](examples/endpoints/GetStoryInfoById.java) — `GET /getStoryInfoByID`.
+- [Get available ranking list](examples/endpoints/GetAvailableRankingList.java) — `GET /getAvailableRankingList`.
+- [Get ranking info](examples/endpoints/GetRankingInfo.java) — `GET /getRankingInfo`.
+
+</details>
+
+<details>
+<summary>Live · 3 examples</summary>
+
+- [Get live event info by ID](examples/endpoints/GetLiveEventInfoById.java) — `GET /getLiveEventInfoByID`.
+- [Get live info](examples/endpoints/GetLiveInfo.java) — `GET /getLiveInfo`.
+- [Get live feed](examples/endpoints/GetLiveFeed.java) — `GET /getLiveFeed`.
+
+</details>
+
+<details>
+<summary>Hashtags · 3 examples</summary>
+
+- [Get hashtag info by URL or tag name](examples/endpoints/GetHashtagInfo.java) — `GET /getHashtagInfo`.
+- [Get hashtag feed by URL or tag name](examples/endpoints/GetHashtagFeed.java) — `GET /getHashtagFeed`.
+- [Get hashtag feed by ID](examples/endpoints/GetHashtagFeedById.java) — `GET /getHashtagFeedByID`.
+
+</details>
+
+<details>
+<summary>Music · 3 examples</summary>
+
+- [Get music info by URL or ID](examples/endpoints/GetMusicInfo.java) — `GET /getMusicInfo`.
+- [Get music feed by URL or ID](examples/endpoints/GetMusicFeed.java) — `GET /getMusicFeed`.
+- [Get music charts](examples/endpoints/GetMusicCharts.java) — `GET /getMusicCharts`.
+
+</details>
 
 ## Configuration
 
